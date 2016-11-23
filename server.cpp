@@ -53,8 +53,7 @@
 #include "connection.h"
 #include "server.h"
 
-Server::Server(QObject *parent)
-    : QTcpServer(parent)
+Server::Server(QObject *parent) : QTcpServer(parent)
 {
     listen(QHostAddress::Any);
 }
@@ -62,6 +61,6 @@ Server::Server(QObject *parent)
 void Server::incomingConnection(qintptr socketDescriptor)
 {
     Connection *connection = new Connection(this);
-    connection->setSocketDescriptor(socketDescriptor);
+    connection->setS1ocketDescriptor(socketDescriptor);
     emit newConnection(connection);
 }

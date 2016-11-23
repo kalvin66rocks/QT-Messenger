@@ -8,7 +8,7 @@ SOURCES       = chatdialog.cpp \
                 connection.cpp \
                 main.cpp \
                 peermanager.cpp \
-                server.cpp
+    server.cpp
 FORMS         = chatdialog.ui
 QT           += network widgets
 
